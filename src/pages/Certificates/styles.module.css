@@ -1,0 +1,115 @@
+/* Sector: Certificates main styles */
+
+.certificatesPage {
+  width: 100%;
+}
+
+.certificatesCont {
+  width: 80%;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.certificatesHeader h1 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+
+  padding-bottom: 0.7rem;
+
+  border-bottom: 1.7px solid var(--border-color);
+  color: var(--text-sub-color-1);
+}
+
+.searchTagsCont {
+  width: 100%;
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.searchTagsCont span.unselectedTag {
+  padding: 0.5rem 1rem;
+
+  border: 1.5px solid var(--color-gr);
+  border-radius: 0.6rem;
+
+  opacity: 0.6;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.searchTagsCont span.unselectedTag:hover {
+  border: 1.5px solid var(--color-se);
+
+  opacity: 1;
+}
+
+.searchTagsCont span.selectedTag {
+  padding: 0.5rem 1rem;
+
+  border: 1.5px solid var(--color-se);
+  border-radius: 0.6rem;
+
+  opacity: 1;
+
+  cursor: pointer;
+}
+
+.certificatesGridCont {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  place-items: center;
+  column-gap: 3rem;
+  row-gap: 8rem;
+
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.noCertificates {
+  color: var(--text-sub-color-2);
+}
+
+.searchCont {
+  min-width: 3rem;
+  max-width: 12rem;
+}
+
+.searchCont input {
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: var(--text-color);
+
+  padding: 0.5rem 0.7rem;
+
+  border-radius: 0.6rem;
+  border: 1.5px solid var(--color-gr);
+
+  background-color: transparent;
+
+  caret-color: var(--color-gr-d2);
+
+  opacity: 0.6;
+}
+
+.searchCont input::placeholder {
+  font-family: inherit;
+
+  color: var(--text-sub-color-2);
+}
+.searchCont input:focus {
+  opacity: 1;
+
+  border: 1.5px solid var(--color-se);
+  outline: none;
+}

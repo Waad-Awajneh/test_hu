@@ -1,0 +1,78 @@
+/* Sector: ArticleTags main classes */
+
+.articleTagsPage {
+  width: 100%;
+  height: auto;
+}
+
+.articleTagsCont {
+  width: 80%;
+  max-width: 65rem;
+
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.articleTagsCont header {
+  width: 100%;
+
+  position: relative;
+}
+
+.backToArticlesBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+
+  background-color: var(--background-sub-color-1);
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  box-shadow: var(--shadow-1);
+}
+
+.backToArticlesBtn:hover {
+  background-color: var(--background-sub-color-2);
+}
+
+.articleTagsCont header h1 {
+  font-size: 4rem;
+
+  padding-bottom: 0.7rem;
+
+  border-bottom: 1.7px solid var(--border-color);
+  color: var(--text-sub-color-1);
+}
+
+.articleTagsCont header h1 span {
+  background: -webkit-linear-gradient(var(--background-color), var(--color-se));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.falteredArticlesCont {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

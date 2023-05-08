@@ -1,0 +1,146 @@
+/* Sector: ArticlePage main classes */
+
+.selectedArticlePage {
+  width: 100%;
+}
+
+.selectedArticlePageCont {
+  max-width: 90rem;
+  width: 80%;
+
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.backToArticlesBtn {
+  max-width: 20rem;
+
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+
+  background-color: var(--background-sub-color-1);
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  box-shadow: var(--shadow-1);
+}
+
+.backToArticlesBtn:hover {
+  background-color: var(--background-sub-color-2);
+}
+
+.selectedArticlePageCont header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.selectedArticlePageCont header h1 {
+  font-size: 3rem;
+}
+
+.selectedArticlePageCont header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.selectedArticleCont {
+  width: 100%;
+  height: auto;
+
+  padding: 2rem 0;
+}
+
+.selectedArticleCover {
+  width: 100%;
+  height: auto;
+}
+
+.selectedArticleCover img {
+  width: 100%;
+  height: auto;
+}
+
+.selectedArticleContent {
+  padding: 2rem 0;
+}
+
+.paraTextContentful {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  margin: 1em 0;
+
+  color: var(--text-color);
+}
+
+.uListContentful {
+  margin-left: 3rem;
+
+  text-decoration: none;
+
+  color: var(--text-color);
+}
+
+.boldTextContentful {
+  font-weight: 600;
+}
+
+.italicTextContentful {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+.underLineTextContentful {
+  font-weight: 400;
+  font-style: none;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.2rem;
+
+  color: var(--text-color);
+}
+
+.imbeddedImgContentful {
+  width: 50%;
+  height: auto;
+
+  margin-bottom: 2rem;
+}
+
+/* .selectedArticleContent a  {
+  color: var(--color-se);
+
+  text-decoration: underline;
+} */
+
+.codeContentful {
+  width: 100%;
+
+  background-color: grey;
+}
+
+.selectedArticleContent code {
+  width: 100%;
+
+  padding: 1rem 2rem;
+
+  color: white;
+  background-color: grey;
+}

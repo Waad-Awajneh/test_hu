@@ -1,0 +1,250 @@
+/* Sector: NavBar main classes */
+
+.navBarBody {
+  max-width: 90rem;
+  width: 80%;
+  margin: 0 auto;
+
+  padding: 2.4rem 0;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  position: relative;
+}
+
+.navBarAppDecorationsCont {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  z-index: -1;
+}
+
+.logoCont {
+  width: 6rem;
+  height: auto;
+}
+
+.logoCont span {
+  display: inline-block;
+
+  padding: 0.7rem 1rem;
+
+  border-radius: 0.7rem;
+
+  font-weight: 500;
+  font-size: 2rem;
+
+  background-color: var(--background-sub-color-2);
+  color: var(--color-text);
+
+  transition: all 0.6s linear;
+}
+
+.logoCont span:hover {
+  transform: rotate(90deg);
+}
+
+.linksCont {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.linksCont a {
+  position: relative;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.linksCont a::before {
+  content: "";
+
+  width: 30%;
+  height: 3px;
+
+  background-image: linear-gradient(
+    to right,
+    var(--background-color),
+    var(--color-pr-l2)
+  );
+
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.linksCont a:hover::before {
+  width: 100%;
+}
+
+.linksCont a:hover {
+  color: var(--color-bl);
+}
+
+.doActionCont {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.toggleColorModeCont,
+.toggleColorModeContLight {
+  padding: 1rem;
+
+  border-radius: 0.7rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.toggleColorModeCont {
+  padding: 1rem;
+
+  background-color: var(--background-sub-color-2);
+}
+
+.toggleColorModeIconDark,
+.toggleColorModeIconLight {
+  width: 2rem;
+  height: auto;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.toggleColorModeIconLight {
+  color: #fff;
+}
+
+.toggleColorModeIconLight:hover {
+  color: var(--background-color);
+
+  transform: rotate(25deg);
+}
+
+.toggleColorModeIconDark {
+  color: "#1a1a1a";
+}
+
+.toggleColorModeIconDark:hover {
+  color: var(--background-color);
+
+  transform: rotate(25deg);
+}
+
+.menuIconCont {
+  padding: 0.7rem;
+
+  background-color: var(--background-sub-color-2);
+  border-radius: 0.7rem;
+
+  display: none;
+}
+
+.menuIconCont:hover .menuIcon {
+  color: var(--background-color);
+}
+
+.menuIcon {
+  display: none;
+
+  width: 2.5rem;
+  height: auto;
+
+  cursor: pointer;
+
+  color: var(--color-text);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.menuContent {
+  width: 100%;
+
+  background-color: var(--background-color);
+  color: var(--color-text);
+  box-shadow: var(--shadow-3);
+}
+
+.menuContentCont {
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.menuContent span {
+  width: 100%;
+
+  padding: 1rem 0;
+}
+
+.menuContent span:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.menuContent span a {
+  transition: all 0.1s ease-in-out;
+
+  font-size: 1.6rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.menuContent span a:hover {
+  color: #38bdf8;
+}
+
+.menuContent span a:hover .menuNavIcon {
+  color: #38bdf8;
+}
+
+.menuNavIcon {
+  width: 1.5rem;
+  height: auto;
+
+  color: var(--text-color);
+}
+
+.menuContentCont button {
+  margin: 2rem 0;
+}
+
+/* Sector: NavBar media quires */
+
+/* 1116px / 16px = 69.75 */
+@media (max-width: 70em) {
+  .menuIconCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menuIcon {
+    display: inline-block;
+  }
+
+  .linksCont {
+    display: none;
+  }
+
+  .doActionCont button {
+    display: none;
+  }
+}

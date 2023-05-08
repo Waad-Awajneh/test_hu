@@ -1,0 +1,23 @@
+/* Sector: DoActionBtn main classes */
+
+.DoActionBtnBody button {
+  display: inline-block;
+
+  font-size: inherit;
+
+  color: var(--color-wh);
+  background-color: var(--color-te);
+
+  border: none;
+  border-radius: 0.5rem;
+
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.DoActionBtnBody button:hover {
+  background-color: var(--color-te-d1);
+}

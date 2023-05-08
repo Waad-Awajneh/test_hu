@@ -1,0 +1,85 @@
+/* Sector: ContentfulCertificate main styles */
+
+.certificateBody {
+  width: 100%;
+  height: auto;
+}
+
+.certificateBody header h3 {
+  min-height: 2rem;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+
+  margin-bottom: 1rem;
+
+  color: var(--text-sub-color-1);
+}
+
+.certificateBody header h3::first-letter {
+  font-weight: inherit;
+  text-transform: uppercase;
+
+  color: inherit;
+}
+
+.certificateImgCont {
+  width: 100%;
+  height: 25rem;
+
+  margin-bottom: 2rem;
+
+  border-radius: 0.3rem;
+
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.certificateImgCont img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: inherit;
+}
+
+.actionBtnCont {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 2.5rem;
+}
+
+.certificateIcon {
+  width: 1.3rem;
+  height: auto;
+
+  color: var(--text-sub-color-1);
+}
+
+.actionBtnCont span {
+  background-color: var(--background-sub-color-1);
+  color: var(--text-sub-color-1);
+
+  padding: 1rem 2rem;
+
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+
+  border-radius: 0.7rem;
+
+  box-shadow: var(--shadow-li3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.actionBtnCont span:hover {
+  background-color: var(--color-gr-d1);
+  color: var(--color-pr);
+}

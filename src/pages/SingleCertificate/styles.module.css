@@ -1,0 +1,246 @@
+/* Sector: SingleCertificate main styles */
+
+.certificatePage {
+  width: 100%;
+  height: auto;
+}
+
+.certificatePageCont {
+  max-width: 90rem;
+  width: 80%;
+  margin: 0 auto;
+
+  padding: 6rem 0;
+}
+
+.certificatePageCont header h1 span {
+  background-color: var(--background-sub-color-1);
+
+  padding: 0.1rem 1rem;
+
+  border-radius: 0.6rem;
+}
+
+.backIcon {
+  width: 2.5rem;
+  height: auto;
+
+  color: var(--text-sub-color-1);
+
+  cursor: pointer;
+}
+
+.certificatePageCont header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+
+  margin-bottom: 2rem;
+
+  color: var(--text-color);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 1.5rem;
+}
+
+.certificatePageCont header h3::first-letter {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.certificateImgCont {
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 0.5rem;
+}
+
+.certificateImgCont img {
+  width: 100%;
+  height: auto;
+}
+
+.certificateAccomplishedDetails {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.certificateAccomplishedDetailsCont {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.certificateCardIcon {
+  width: 1.2rem;
+  height: auto;
+}
+
+.certificateCardSubIcon {
+  width: 1rem;
+  height: auto;
+}
+
+.certificateAccomplishedDate,
+.certificateInstitutionSide,
+.certificateStudyingStatus,
+.certificateInstitutionRating,
+.certificatePersonalRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.certificatePersonalRatingNum,
+.certificateInstRatingNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.certificateDateText,
+.certificateStudyingStatusText {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.certificateRatings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.certificateDesc {
+  width: 100%;
+
+  color: var(--color-text);
+
+  margin-top: 8rem;
+}
+
+.certificateDesc header h2,
+.certificateDesc header h2::first-letter {
+  color: var(--color-text);
+
+  font-weight: 600;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.certificateDesc p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  margin-top: 1rem;
+
+  color: var(--text-sub-color);
+}
+
+.certificateDesc ul {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  margin: 2rem 0;
+  margin-left: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certificateDesc ul li p {
+  margin: 0;
+}
+
+.certificateDesc ol {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  margin: 2rem 0;
+  margin-left: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certificateDesc ol li p {
+  margin: 0;
+}
+
+.certificateDesc a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-se);
+  text-decoration-thickness: 0.5px;
+
+  color: var(--color-se);
+}
+
+.certificateDesc a:hover {
+  color: var(--color-se-d1);
+  text-decoration-color: var(--color-se-d1);
+}
+
+.certificateDesc h1,
+.certificateDesc h2,
+.certificateDesc h3,
+.certificateDesc h4 {
+  margin-top: 3rem;
+
+  font-weight: 600;
+}
+
+.certificateDesc h3 {
+  font-size: 1.8rem;
+}
+
+/* Contentful API */
+
+.boldTextContentful {
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  color: var(--text-sub-color);
+}
+
+.italicTextContentful {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  color: var(--text-sub-color);
+}
+
+.underLineTextContentful {
+  font-weight: 400;
+  font-style: none;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.2rem;
+
+  color: var(--text-color);
+}
+
+.imbeddedImgContentful {
+  width: 50%;
+  height: auto;
+
+  margin-bottom: 2rem;
+}

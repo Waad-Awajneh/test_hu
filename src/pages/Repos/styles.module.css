@@ -1,0 +1,104 @@
+/* Sector: Repos main classes */
+
+.reposPage {
+  width: 100%;
+}
+
+.reposCont {
+  width: 80%;
+  max-width: 65rem;
+  margin: 0 auto;
+
+  padding: 5rem 0;
+}
+
+.reposCont header h1 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+
+  padding-bottom: 0.7rem;
+
+  color: var(--text-sub-color-1);
+  border-bottom: 1.7px solid var(--border-color);
+}
+
+.reposContentCont {
+  padding: 5rem 0;
+}
+
+.reposSearchCont {
+  width: 100%;
+
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reposSearchCont input {
+  width: 80%;
+
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: var(--text-color);
+
+  padding: 0.5rem 0.7rem;
+
+  border-radius: 0.6rem;
+  border: 1.5px solid var(--border-sub-color-1);
+  outline: none;
+
+  background-color: transparent;
+
+  caret-color: var(--color-gr-d2);
+
+  opacity: 0.6;
+}
+
+.reposSearchCont input::placeholder {
+  font-family: inherit;
+
+  color: var(--text-sub-color-2);
+}
+.reposSearchCont input:focus {
+  border: 1.5px solid var(--color-se);
+  outline: none;
+
+  opacity: 1;
+}
+
+.searchedReposNum {
+  width: 80px;
+
+  color: var(--text-sub-color-2);
+
+  opacity: 0.6;
+
+  transition: all 0.15s ease-in-out;
+}
+
+.reposSearchCont input:focus ~ .searchedReposNum {
+  opacity: 1;
+}
+
+.mainRepos {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.noRepositories {
+  color: var(--text-sub-color-2);
+}
+
+/* Sector: Repos media quires */
+
+/* 520px / 16px = 32.5 */
+/* @media (max-width: 32em) {
+  .reposSearchCont input {
+    width: 80%;
+  }
+} */
