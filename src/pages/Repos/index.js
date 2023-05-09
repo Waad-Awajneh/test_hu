@@ -20,7 +20,12 @@ export default function Repos() {
     (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
   const searchedRepo = GitHubReposByDate?.filter((repo) =>
-    repo.name.includes(reposSearch?.toLocaleLowerCase())
+    repo.name
+      .split("-")
+      .map((word) => word?.charAt(0).toUpperCase() + word?.slice(1))
+      .join(" ")
+      .toLowerCase()
+      .includes(reposSearch?.toLowerCase())
   );
 
   return (
