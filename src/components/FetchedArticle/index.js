@@ -16,24 +16,24 @@ export default function FetchedArticle({ ContentfulProject, index }) {
         </Link>
 
         <p>
-          {ContentfulProject?.fields.articleSummary}
+          {`${ContentfulProject?.fields.articleSummary} `}
 
           <Link
             to={`/articles/${ContentfulProject?.fields.articleTags.linkTag}`}
           >
             <span>
-              Read more
-              <BiChevronRight
-                className={`${styles.articleIcon} ${styles.readMoreIcon}`}
-              />
+              <span>
+                Read more
+                <BiChevronRight
+                  className={`${styles.articleIcon} ${styles.readMoreIcon}`}
+                />
+              </span>
             </span>
           </Link>
         </p>
       </header>
 
       <div>
-        <p className={styles.articleViews}> {index + 1} Views</p>
-
         <p className={styles.articleDate}>
           {new Date(
             ContentfulProject?.fields.articlePublishedDate

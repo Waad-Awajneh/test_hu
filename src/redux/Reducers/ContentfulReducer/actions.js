@@ -33,8 +33,6 @@ export const fetchContentfulProjects = () => async (dispatch) => {
       portfolioResumeEntry: portfolioResumeEntry.items,
     };
 
-    console.log("contentfulEntries: ", contentfulEntries);
-
     dispatch({
       type: CONTENTFUL_CONSTANTS.CONTENTFUL_FETCH_DATA_SUCCESS,
       payload: contentfulEntries,
