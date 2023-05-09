@@ -121,6 +121,10 @@ a.active::before {
   transition: all 0.5s ease-in-out;
 }
 
+a.active svg {
+  color: var(--color-se);
+}
+
 /* Buttons */
 button {
   font-family: inherit;
