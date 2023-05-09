@@ -27,6 +27,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 export default function Home() {
   const dispatch = useDispatch();
 
+  // Contentful files
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
@@ -38,16 +39,20 @@ export default function Home() {
       new Date(b.fields.certificateAccomplishedDate) -
       new Date(a.fields.certificateAccomplishedDate)
   );
+  const portfolioResumeContentful = ContentfulProjects?.filter(
+    (entry) => entry.sys.contentType.sys.id === "portfoliosResumeDocument"
+  );
 
+  // Vercel & Netlify files
   const { VercelProjects } = useSelector((state) => state.VercelReducer);
   const { NetlifyProjects } = useSelector((state) => state.NetlifyReducer);
   const VercelAndNetlifyProjects = [...VercelProjects, ...NetlifyProjects];
 
+  // GitHub files
   const { GitHubRepos } = useSelector((state) => state.GitHubReducer);
   const GitHubReposByDate = GitHubRepos?.sort(
     (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
-
 
   useEffect(() => {
     // fetching projects
