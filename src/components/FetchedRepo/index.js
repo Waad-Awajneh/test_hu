@@ -13,17 +13,31 @@ import {
 import { RiAdminLine } from "react-icons/ri";
 
 export default function FetchedRepo({ repo }) {
+  const repoName = repo?.name;
+
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     window.alert("Link is copied!");
   };
+
+  function convertToTitleCase(str) {
+    const words = str.split("-");
+
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+
+    return words.join(" ");
+  }
+
+  const newRepoName = convertToTitleCase(repoName);
 
   return (
     <div className={styles.repoCard}>
       <div className={styles.repoCardLeft}>
         {/* Repo name */}
         <span className={styles.repoCardName}>
-          {repo?.name.charAt(0).toUpperCase() + repo?.name.slice(1)}
+          {newRepoName}
         </span>
 
         {/* Repo desc */}

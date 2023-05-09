@@ -91,14 +91,10 @@
 }
 
 .noRepositories {
+  text-align: center;
+
+  margin-top: 1rem;
+  
   color: var(--text-sub-color-2);
 }
 
-/* Sector: Repos media quires */
-
-/* 520px / 16px = 32.5 */
-/* @media (max-width: 32em) {
-  .reposSearchCont input {
-    width: 80%;
-  }
-} */
