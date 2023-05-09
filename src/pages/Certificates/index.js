@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 // react-helmet
 import { Helmet } from "react-helmet";
 
-// components
+// component
 import ContentfulCertificate from "../../components/ContentfulCertificate";
 
 // styles, icons
@@ -15,24 +15,22 @@ import styles from "./styles.module.css";
 export default function Certificates() {
   const [selectedTag, setSelectedTag] = useState("All");
 
+  // Contentful files
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  // const certificatesContentful = ContentfulProjects.filter(
-  //   (entry) => entry.sys.contentType.sys.id === "portfolioCertificate"
-  // );
-
-  // const taggedCertificates = certificatesContentful.filter((certificate) =>
-  //   certificate.fields.certificateSearchedTags
-  //     .toLowerCase()
-  //     .includes(selectedTag.toLowerCase())
-  // );
-
-  // const certificatesContentfulByDate = certificatesContentful?.sort(
-  //   (a, b) =>
-  //     new Date(b.fields.certificateAccomplishedDate) -
-  //     new Date(a.fields.certificateAccomplishedDate)
-  // );
+  const certificatesContentful =
+    ContentfulProjects?.portfolioCertificateEntries;
+  const certificatesContentfulByDate = certificatesContentful?.sort(
+    (a, b) =>
+      new Date(b.fields.certificateAccomplishedDate) -
+      new Date(a.fields.certificateAccomplishedDate)
+  );
+  const taggedCertificates = certificatesContentful.filter((certificate) =>
+    certificate.fields.certificateSearchedTags
+      .toLowerCase()
+      .includes(selectedTag.toLowerCase())
+  );
 
   const handleTagClick = (tag) => {
     setSelectedTag(tag);
@@ -131,7 +129,7 @@ export default function Certificates() {
         </div>
 
         <div className={styles.certificatesGridCont}>
-          {/* {selectedTag === "All" ? (
+          {selectedTag === "All" ? (
             certificatesContentfulByDate?.map((certificate, index) => (
               <div className={styles.certificatesCardsCont}>
                 <ContentfulCertificate key={index} certificate={certificate} />
@@ -145,9 +143,9 @@ export default function Certificates() {
             ))
           ) : (
             <p className={styles.noCertificates}>
-              No Certificates for this Topic
+              No Certificates
             </p>
-          )} */}
+          )}
         </div>
       </div>
     </div>
