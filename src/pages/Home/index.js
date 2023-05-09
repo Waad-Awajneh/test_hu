@@ -51,7 +51,7 @@ export default function Home() {
     (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
 
-  console.log({GitHubRepos});
+  console.log({ GitHubRepos });
 
   useEffect(() => {
     // fetching projects
@@ -77,7 +77,7 @@ export default function Home() {
           <div className={styles.homeIntro}>
             <div className={styles.rightCont}>
               <img
-                src={require("../../assets/images/personal pic2.jpg")}
+                src={require("../../assets/images/personalPicLow.jpg")}
                 alt="Personal pic for Huthaifa Altiti, the site owner"
               />
             </div>
@@ -87,7 +87,13 @@ export default function Home() {
 
               <h3>A Front-End Developer & Design Enthusiast</h3>
 
-              <a href={resumeFile} download>
+              <a
+                href={
+                  portfolioResumeContentful[0]?.fields.resumeDocumentFile.fields
+                    .file.url || resumeFile
+                }
+                download
+              >
                 <span>
                   <AiOutlineCloudDownload className={styles.downloadIcon} />
                 </span>

@@ -33,7 +33,7 @@
 }
 
 .leftCont {
-  width: 65%;
+  width: 60%;
   height: auto;
 
   display: flex;
@@ -64,7 +64,7 @@
   color: var(--text-sub-color-1);
 
   padding: 1rem 2rem;
-  margin-top: 55px;
+  margin-top: 4rem;
 
   font-size: 1.6rem;
 
@@ -97,7 +97,7 @@
 }
 
 .rightCont {
-  width: 35%;
+  width: 40%;
   height: auto;
 
   animation: move-down 1.5s ease, fade-in 1s ease forwards;
@@ -107,7 +107,7 @@
   width: 100%;
   height: 100%;
 
-  border-radius: 0.15rem;
+  border-radius: 0.2rem;
 
   box-shadow: var(--shadow-5);
 }
@@ -157,7 +157,7 @@
   font-size: 2.2rem;
   letter-spacing: 0.7px;
 
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 
   border-bottom: 1px solid var(--background-sub-color-2);
 }
@@ -240,6 +240,12 @@
   .leftCont p {
     font-size: 1.6rem;
   }
+
+  .leftCont a {
+    margin-top: 3.8rem;
+
+    font-size: 1.4rem;
+  }
 }
 
 /* 1070px / 16px = 66.875 */
@@ -263,13 +269,6 @@
     font-size: 1.4rem;
   }
 
-  .leftCont a {
-    padding: 1rem 2rem;
-    margin-top: 10px;
-
-    font-size: 1.4rem;
-  }
-
   .downloadIcon {
     width: 2rem;
     height: auto;
@@ -287,7 +286,11 @@
   }
 
   .leftCont a {
-    margin-top: 5px;
+    margin-top: 2rem;
+  }
+
+  .downloadIcon {
+    width: 1.8rem;
   }
 }
 
@@ -305,7 +308,7 @@
   }
 
   .rightCont img {
-    width: 60%;
+    width: 80%;
     border-radius: 1rem;
   }
 
@@ -314,17 +317,17 @@
   }
 
   .leftCont h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .leftCont h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .leftCont a {
-    margin-top: 30px;
+    margin-top: 4rem;
 
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .downloadIcon {
@@ -335,7 +338,28 @@
 /* 588px / 16px = 36.75 */
 @media (max-width: 37em) {
   .leftCont h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  .leftCont h3 {
+    font-size: 1.6rem;
+  }
+
+  .leftCont a {
+    margin-top: 4rem;
+
+    font-size: 1.4rem;
+  }
+
+  .downloadIcon {
+    width: 1.8rem;
+  }
+}
+
+/* 390px / 16px = 24.375 */
+@media (max-width: 24em) {
+  .leftCont h1 {
+    font-size: 2.8rem;
   }
 
   .leftCont h3 {
@@ -343,23 +367,12 @@
   }
 
   .leftCont a {
-    margin-top: 30px;
+    margin-top: 2.5rem;
 
     font-size: 1.2rem;
   }
 
   .downloadIcon {
-    width: 2rem;
-  }
-}
-
-/* 390px / 16px = 24.375 */
-@media (max-width: 24em) {
-  .leftCont h1 {
-    font-size: 3rem;
-  }
-
-  .leftCont p {
-    font-size: 1rem;
+    width: 1.6rem;
   }
 }

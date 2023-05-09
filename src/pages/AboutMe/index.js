@@ -72,7 +72,7 @@ export default function AboutMe() {
             <br />
             Currently, I am working on several apps set to be launched soon,
             while also dedicating my time to in-depth learning of React.js,
-            Next.js, Node.js, MongoDB, SQL, MySQL, Python, and other programming
+            Next.js, Node.js, SQL, MySQL, Python, and other programming
             languages. My goal is to utilize this knowledge to develop
             cross-platform apps and delve into blockchain development.
           </p>
