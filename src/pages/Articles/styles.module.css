@@ -35,6 +35,7 @@
   width: 100%;
 
   margin: 3rem 0;
+  margin-bottom: 2rem;
 
   position: relative;
 }
@@ -81,12 +82,22 @@
 
 .articlesContent {
   width: 100%;
+
+  border-top: 1.5px solid var(--border-color);
 }
 
 .ContentflArticles {
   width: 100%;
 
+  padding-top: 1.5rem;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.noArticles {
+  text-align: center;
+
+  margin-top: 3rem;
 }

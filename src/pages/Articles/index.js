@@ -46,7 +46,7 @@ export default function Articles() {
         {/* Helmet */}
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Articles, Titi</title>
+          <title>Typed Articles</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
 
@@ -54,10 +54,11 @@ export default function Articles() {
           <h1>Articles</h1>
 
           <p>
-            In this page you can find some of the articles that I wrote over the
-            days. You can click on any of the tags like <strong>Tools </strong>
-            or <strong> JavaScript</strong>, or search by your typed tag to
-            filter it's articles.
+            On this page, you will find a selection of my written articles. You
+            can browse through these articles by clicking on any of the tags,
+            such as <strong>Coding</strong> or <strong>JavaScript</strong>, or by
+            typing a specific tag in the search bar to filter the articles
+            accordingly.
           </p>
         </header>
 
@@ -76,7 +77,7 @@ export default function Articles() {
         <div className={styles.articlesContent}>
           <div className={styles.ContentflArticles}>
             {searchedArticle?.length === 0 ? (
-              <p>Search another tag</p>
+              <p className={styles.noArticles}>No articles</p>
             ) : (
               searchedArticle?.map((ContentfulProject, index) => (
                 <FetchedArticle
