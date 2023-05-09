@@ -70,9 +70,7 @@ export default function Projects() {
               <FetchedProject key={index} project={project} />
             ))
           ) : (
-            <p className={styles.noProjects}>
-              No projects
-            </p>
+            <p className={styles.noProjects}>No projects</p>
           )}
         </div>
       </div>
