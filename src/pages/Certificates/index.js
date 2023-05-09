@@ -18,21 +18,21 @@ export default function Certificates() {
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  const certificatesContentful = ContentfulProjects.filter(
-    (entry) => entry.sys.contentType.sys.id === "portfolioCertificate"
-  );
+  // const certificatesContentful = ContentfulProjects.filter(
+  //   (entry) => entry.sys.contentType.sys.id === "portfolioCertificate"
+  // );
 
-  const taggedCertificates = certificatesContentful.filter((certificate) =>
-    certificate.fields.certificateSearchedTags
-      .toLowerCase()
-      .includes(selectedTag.toLowerCase())
-  );
+  // const taggedCertificates = certificatesContentful.filter((certificate) =>
+  //   certificate.fields.certificateSearchedTags
+  //     .toLowerCase()
+  //     .includes(selectedTag.toLowerCase())
+  // );
 
-  const certificatesContentfulByDate = certificatesContentful?.sort(
-    (a, b) =>
-      new Date(b.fields.certificateAccomplishedDate) -
-      new Date(a.fields.certificateAccomplishedDate)
-  );
+  // const certificatesContentfulByDate = certificatesContentful?.sort(
+  //   (a, b) =>
+  //     new Date(b.fields.certificateAccomplishedDate) -
+  //     new Date(a.fields.certificateAccomplishedDate)
+  // );
 
   const handleTagClick = (tag) => {
     setSelectedTag(tag);
@@ -131,7 +131,7 @@ export default function Certificates() {
         </div>
 
         <div className={styles.certificatesGridCont}>
-          {selectedTag === "All" ? (
+          {/* {selectedTag === "All" ? (
             certificatesContentfulByDate?.map((certificate, index) => (
               <div className={styles.certificatesCardsCont}>
                 <ContentfulCertificate key={index} certificate={certificate} />
@@ -147,7 +147,7 @@ export default function Certificates() {
             <p className={styles.noCertificates}>
               No Certificates for this Topic
             </p>
-          )}
+          )} */}
         </div>
       </div>
     </div>

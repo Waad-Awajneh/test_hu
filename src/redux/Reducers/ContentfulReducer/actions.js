@@ -12,15 +12,32 @@ export const fetchContentfulProjects = () => async (dispatch) => {
 
     const client = contentful.createClient({
       space: "g4e8h2r1b3wo",
-      accessToken: "YyoNcEU9oyvtoVN3abu0QD6KQ2yuZ-eQDH3EqurHqkE",
+      accessToken: "MWi2kVFGBpQopWJgaVhyrXUAyRKpQ5vOJGzqfwYgGOU",
     });
-    const entries = await client.getEntries({
-      content_type: ["article", "portfolioCertificate"],
+
+    const portfolioCertificateEntries = await client.getEntries({
+      content_type: "portfolioCertificate",
     });
+
+    const articleEntries = await client.getEntries({
+      content_type: "article",
+    });
+
+    const portfolioResumeEntry = await client.getEntries({
+      content_type: "portfoliosResumeDocument",
+    });
+
+    const contentfulEntries = {
+      portfolioCertificateEntries: portfolioCertificateEntries.items,
+      articleEntries: articleEntries.items,
+      portfolioResumeEntry: portfolioResumeEntry.items,
+    };
+
+    console.log("contentfulEntries: ", contentfulEntries);
 
     dispatch({
       type: CONTENTFUL_CONSTANTS.CONTENTFUL_FETCH_DATA_SUCCESS,
-      payload: entries.items,
+      payload: contentfulEntries,
     });
   } catch (error) {
     dispatch({

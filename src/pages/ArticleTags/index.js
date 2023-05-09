@@ -20,13 +20,13 @@ export default function ArticleTags() {
     (state) => state.ContentfulReducer
   );
 
-  const ContentfulArticles = ContentfulProjects.filter(
-    (entry) => entry.sys.contentType.sys.id === "article"
-  );
+  // const ContentfulArticles = ContentfulProjects.filter(
+  //   (entry) => entry.sys.contentType.sys.id === "article"
+  // );
 
-  const filterFetchedArticles = ContentfulArticles.filter((article) =>
-    article.fields.articleTagName.toLowerCase().includes(id?.toLowerCase())
-  );
+  // const filterFetchedArticles = ContentfulArticles.filter((article) =>
+  //   article.fields.articleTagName.toLowerCase().includes(id?.toLowerCase())
+  // );
 
   return (
     <div className={styles.articleTagsPage}>
@@ -50,9 +50,9 @@ export default function ArticleTags() {
         </header>
 
         <div className={styles.falteredArticlesCont}>
-          {filterFetchedArticles?.map((article) => (
+          {/* {filterFetchedArticles?.map((article) => (
             <FetchedArticle ContentfulProject={article} />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
