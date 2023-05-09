@@ -19,9 +19,6 @@ import {
 export default function Footer() {
   const { colorMode } = useSelector((state) => state.VercelReducer);
 
-  const today = new Date();
-  const year = today.getFullYear();
-
   return (
     <div className={styles.footerBody}>
       <div className={styles.footerCont}>
@@ -94,11 +91,6 @@ export default function Footer() {
               </Link>
             </span>
           </div>
-        </div>
-
-        {/* Copyright container */}
-        <div className={styles.copyright}>
-          <p> &copy; {year} Huthaifa Altiti</p>
         </div>
       </div>
     </div>

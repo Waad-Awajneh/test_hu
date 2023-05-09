@@ -2,6 +2,8 @@
 
 .certificatesPage {
   width: 100%;
+
+  margin-bottom: auto;
 }
 
 .certificatesCont {

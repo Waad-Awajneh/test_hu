@@ -44,9 +44,10 @@ export default function Home() {
   const VercelAndNetlifyProjects = [...VercelProjects, ...NetlifyProjects];
 
   const { GitHubRepos } = useSelector((state) => state.GitHubReducer);
-  const GitHubReposByDate = GitHubRepos.sort(
+  const GitHubReposByDate = GitHubRepos?.sort(
     (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
+
 
   useEffect(() => {
     // fetching projects
@@ -62,9 +63,9 @@ export default function Home() {
   return (
     <div className={styles.homePage}>
       {/* Home decorations  */}
-      {/* <div className={styles.homeAppDecorationsCont}>
-        <AppDecorations />
-      </div> */}
+      <div className={styles.homeAppDecorationsCont}>
+        {/* <AppDecorations /> */}
+      </div>
 
       <div className={styles.homePageCont}>
         {/* Intro home contents */}

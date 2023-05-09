@@ -30,7 +30,6 @@ const NotFound = lazy(() => import("./pages/NotFound/index.js"));
 
 function App() {
   // return true && <Spinner />;
-
   return (
     <div className="App">
       <Suspense fallback={<Spinner />}>
