@@ -23,7 +23,7 @@
   font-size: 4rem;
   letter-spacing: 1px;
 
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
 
   border-bottom: 1.7px solid var(--border-color);
   color: var(--text-sub-color-1);
@@ -38,6 +38,7 @@
 
   margin-top: 4rem;
   padding: 2rem 0;
+  padding-bottom: 1.5rem;
 
   display: flex;
   align-items: center;
@@ -86,7 +87,8 @@
 }
 
 .projectsContentsCont {
-  padding: 3rem 0;
+  padding: 2rem 0;
+  padding-top: 3rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -100,10 +102,12 @@
 
 .noProjects {
   width: 100%;
-
+  
   font-size: 1.2rem;
   font-family: inherit;
   text-align: center;
 
   color: var(--text-sub-color-2);
+
+  margin-top: 1rem;
 }
