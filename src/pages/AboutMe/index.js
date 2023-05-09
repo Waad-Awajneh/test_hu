@@ -21,9 +21,8 @@ export default function AboutMe() {
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  const portfolioResumeContentful = ContentfulProjects?.filter(
-    (entry) => entry.sys.contentType.sys.id === "portfoliosResumeDocument"
-  );
+
+  const portfolioResumeContentful = ContentfulProjects?.portfolioResumeEntry;
 
   return (
     <div className={styles.aboutPage}>

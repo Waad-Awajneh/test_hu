@@ -33,7 +33,7 @@ export default function Repos() {
       {/* Helmet */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Repos, Titi</title>
+        <title>Recent Repos</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
