@@ -15,7 +15,7 @@ export default function Uses() {
       {/* Helmet */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Uses, Titi</title>
+        <title>Daily Uses</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
@@ -37,7 +37,7 @@ export default function Uses() {
 
             <p>
               In this page you can find the hardwares, tools, softwares,
-              services and social platforms I use for my daily work.
+              services and social platforms which I use for my daily work.
             </p>
           </header>
 
