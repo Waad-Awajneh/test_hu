@@ -15,8 +15,6 @@ export const FetchGitHubRepos = () => async (dispatch) => {
       headers,
     });
 
-    console.log({responseGitHub});
-
     const dataGitHubResponse = await responseGitHub.json();
 
     dispatch({

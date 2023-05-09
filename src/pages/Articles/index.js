@@ -18,13 +18,12 @@ import { CiSearch } from "react-icons/ci";
 
 export default function Articles() {
   const dispatch = useDispatch();
+
+  // Contentful files
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-
-  const articlesContentful = ContentfulProjects.filter(
-    (entry) => entry.sys.contentType.sys.id === "article"
-  );
+  const articlesContentful = ContentfulProjects?.articleEntries;
 
   const [searchedValue, setSearchedValue] = useState("");
   const searchedArticle = articlesContentful?.filter((article) =>
@@ -38,7 +37,6 @@ export default function Articles() {
   };
 
   useEffect(() => {
-    // Fetching Contentful projects
     dispatch(fetchContentfulProjects());
   }, []);
 

@@ -20,13 +20,13 @@ export default function ArticlePage() {
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  const ContentfulArticles = ContentfulProjects.filter(
-    (entry) => entry.sys.contentType.sys.id === "article"
-  );
+  // const ContentfulArticles = ContentfulProjects.filter(
+  //   (entry) => entry.sys.contentType.sys.id === "article"
+  // );
 
-  const selectedArticle = ContentfulArticles.filter(
-    (article) => id === article.fields.articleTags.linkTag
-  );
+  // const selectedArticle = ContentfulArticles.filter(
+  //   (article) => id === article.fields.articleTags.linkTag
+  // );
 
   const renderNodesOptions = {
     renderMark: {
@@ -109,17 +109,17 @@ export default function ArticlePage() {
             <span>Back to articles</span>
           </span>
 
-          <h1>{selectedArticle[0]?.fields.articleTitle}</h1>
+          {/* <h1>{selectedArticle[0]?.fields.articleTitle}</h1> */}
 
           <div>
             <span className={styles.articleDate}>
-              {new Date(
+              {/* {new Date(
                 selectedArticle[0]?.fields.articlePublishedDate
               ).toLocaleString("en-US", {
                 month: "short",
                 day: "numeric",
                 year: "numeric",
-              })}
+              })} */}
             </span>
 
             <span>20 Views</span>
@@ -129,20 +129,20 @@ export default function ArticlePage() {
         <div className={styles.selectedArticleCont}>
           {/* Article cover picture */}
           <div className={styles.selectedArticleCover}>
-            <img
+            {/* <img
               src={
                 selectedArticle[0].fields.articleCoverPicture.fields.file.url
               }
               alt={`${selectedArticle[0].fields.articleCoverPicture.fields.file.fileName}`}
-            />
+            /> */}
           </div>
 
           {/* article main content */}
           <div className={styles.selectedArticleContent}>
-            {documentToReactComponents(
+            {/* {documentToReactComponents(
               selectedArticle[0].fields.articleContent,
               renderNodesOptions
-            )}
+            )} */}
           </div>
         </div>
       </div>

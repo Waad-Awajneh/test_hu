@@ -31,17 +31,16 @@ export default function Home() {
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  const certificatesContentful = ContentfulProjects?.filter(
-    (entry) => entry.sys.contentType.sys.id === "portfolioCertificate"
-  );
+
+  console.log("ContentfulProjects:", ContentfulProjects);
+  const certificatesContentful =
+    ContentfulProjects?.portfolioCertificateEntries;
   const certificatesContentfulByDate = certificatesContentful?.sort(
     (a, b) =>
       new Date(b.fields.certificateAccomplishedDate) -
       new Date(a.fields.certificateAccomplishedDate)
   );
-  const portfolioResumeContentful = ContentfulProjects?.filter(
-    (entry) => entry.sys.contentType.sys.id === "portfoliosResumeDocument"
-  );
+  const portfolioResumeContentful = ContentfulProjects?.portfolioResumeEntry;
 
   // Vercel & Netlify files
   const { VercelProjects } = useSelector((state) => state.VercelReducer);
@@ -157,11 +156,8 @@ export default function Home() {
               {certificatesContentfulByDate
                 ?.slice(0, 2)
                 .map((certificate, index) => (
-                  <div className={styles.certificatesCardsCont}>
-                    <ContentfulCertificate
-                      key={index}
-                      certificate={certificate}
-                    />
+                  <div key={index} className={styles.certificatesCardsCont}>
+                    <ContentfulCertificate certificate={certificate} />
                   </div>
                 ))}
             </div>
