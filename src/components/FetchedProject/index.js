@@ -10,10 +10,22 @@ export default function FetchedProject({ project }) {
   const projectName = project?.name;
   const projectUrl = project?.url;
 
+  function convertToTitleCase(str) {
+    const words = str.split("-");
+
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+
+    return words.join(" ");
+  }
+
+  const newProjectName = convertToTitleCase(projectName);
+
   return (
     <div className={styles.fetchedProjectBody}>
       <div className={styles.fetchedProjectContent}>
-        <h2>{projectName}</h2>
+        <h2>{newProjectName}</h2>
 
         <Link to={projectUrl} target="_blank">
           <h3>

@@ -31,8 +31,6 @@ export default function Home() {
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-
-  console.log("ContentfulProjects:", ContentfulProjects);
   const certificatesContentful =
     ContentfulProjects?.portfolioCertificateEntries;
   const certificatesContentfulByDate = certificatesContentful?.sort(

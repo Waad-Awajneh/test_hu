@@ -14,7 +14,6 @@ import { FetchVercelProjects } from "../../redux/Reducers/VercelReducer/actions"
 
 // styles, icons
 import styles from "./styles.module.css";
-import { CiSearch } from "react-icons/ci";
 
 export default function Projects() {
   const dispatch = useDispatch();
@@ -45,7 +44,7 @@ export default function Projects() {
       {/* Helmet */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Projects, Titi</title>
+        <title>Recent Projects</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
@@ -72,7 +71,7 @@ export default function Projects() {
             ))
           ) : (
             <p className={styles.noProjects}>
-              No projects for the searched value
+              No projects
             </p>
           )}
         </div>
