@@ -68,7 +68,7 @@ export default function Home() {
     <div className={styles.homePage}>
       {/* Home decorations  */}
       <div className={styles.homeAppDecorationsCont}>
-        {/* <AppDecorations /> */}
+        <AppDecorations />
       </div>
 
       <div className={styles.homePageCont}>
