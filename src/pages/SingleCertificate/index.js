@@ -30,20 +30,18 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 export default function SingleCertificate() {
   const nav = useNavigate();
+  const { id } = useParams();
+
+  // Contentful files
   const { ContentfulProjects } = useSelector(
     (state) => state.ContentfulReducer
   );
-  const certificatesContentful = ContentfulProjects?.filter(
-    (entry) => entry.sys.contentType.sys.id === "portfolioCertificate"
-  );
-
-  const { id } = useParams();
+  const certificatesContentful =
+    ContentfulProjects?.portfolioCertificateEntries;
 
   const selectedCertificate = certificatesContentful?.filter(
     (certificate) => id === certificate.fields.certificateUrl
   );
-
-  console.log("selectedCertificate: ", selectedCertificate);
 
   const renderNodesOptions = {
     renderMark: {
