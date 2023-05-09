@@ -41,7 +41,7 @@ export default function Certificates() {
       {/* Helmet */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Certificates, Titi</title>
+        <title>Gained Certificates</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 

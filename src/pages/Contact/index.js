@@ -17,7 +17,7 @@ export default function Contact() {
       {/* Helmet */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Call Huthaifa</title>
+        <title>Meet Huthaifa</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
@@ -40,7 +40,11 @@ export default function Contact() {
               <MdEmail className={styles.contactIcon} />
             </span>
 
-            <p>huthaefaaltete@rocketmail.com</p>
+            <p>
+              <a href="mailto:huthaefaaltete@rocketmail.com">
+                huthaefaaltete@rocketmail.com
+              </a>
+            </p>
           </div>
 
           {/* tel sector */}
@@ -49,7 +53,9 @@ export default function Contact() {
               <MdCall className={styles.contactIcon} />
             </span>
 
-            <p>+962 797 66 2401</p>
+            <p>
+              <a href="tel:+962797662401">+962 797 66 2401</a>
+            </p>
           </div>
         </div>
 
