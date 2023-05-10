@@ -15,6 +15,7 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
+import { FaBloggerB } from "react-icons/fa";
 
 export default function Footer() {
   const { colorMode } = useSelector((state) => state.VercelReducer);
@@ -78,6 +79,13 @@ export default function Footer() {
                 to="https://www.linkedin.com/in/huthaifaaltiti"
               >
                 <AiFillLinkedin className={styles.footerIcon} />
+              </Link>
+            </span>
+
+            {/* Blogger */}
+            <span className={styles.footerIconCont}>
+              <Link target="_blank" to="https://huthaifaaltiti.blogspot.com/">
+                <FaBloggerB className={styles.footerIcon} />
               </Link>
             </span>
 
