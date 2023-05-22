@@ -3,6 +3,10 @@ import React from "react";
 // react-router-dom
 import { Link } from "react-router-dom";
 
+// react-loading-skelton
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 // styles, icon
 import styles from "./styles.module.css";
 import { BiChevronRight } from "react-icons/bi";
@@ -12,7 +16,7 @@ export default function FetchedArticle({ ContentfulProject, index }) {
     <div className={styles.ContentflArticle}>
       <header>
         <Link to={`/articles/${ContentfulProject?.fields.articleTags.linkTag}`}>
-          <h3>{ContentfulProject?.fields.articleTitle}</h3>
+          <h3>{ContentfulProject?.fields.articleTitle || <Skeleton />}</h3>
         </Link>
 
         <p>

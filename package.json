@@ -2,6 +2,7 @@
   "name": "portfolio3",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000/",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.4",
     "@lottiefiles/lottie-player": "^1.7.1",
@@ -14,6 +15,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
+    "react-loading-skeleton": "^3.3.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
