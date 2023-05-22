@@ -9,55 +9,30 @@ import styles from "./styles.module.css";
 export default function AppDecorations() {
   const { colorMode } = useSelector((state) => state.VercelReducer);
 
+  const particlesCount = 30;
+
   return (
-    <div class={styles.decorationsBody}>
+    <div className={styles.decorationsBody}>
       <div className={styles.decorationsDotsCont}>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
-        <div class={styles.particle}></div>
+        {Array.from({ length: particlesCount }).map((_, index) => (
+          <div key={index} className={styles.particle} />
+        ))}
       </div>
 
-      <div class={styles.bubbles}>
-        <div class={`${styles.glinda} ${styles.x}`}>
-          <div class={`${styles.glinda} ${styles.y}`}>
+      <div className={styles.bubbles}>
+        <div className={`${styles.glinda} ${styles.x}`}>
+          <div className={`${styles.glinda} ${styles.y}`}>
             {colorMode === "dark" ? (
               <img
                 src={require("../../assets/images/H Logo-wh.png")}
                 alt="Moveable image"
-                class={styles.moveableImg}
+                className={styles.moveableImg}
               />
             ) : (
               <img
                 src={require("../../assets/images/H Logo-dark.png")}
                 alt="Moveable image"
-                class={styles.moveableImg}
+                className={styles.moveableImg}
               />
             )}
           </div>
