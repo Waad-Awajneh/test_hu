@@ -9,16 +9,19 @@ import App from "./App";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// const router = createBrowserRouter([
+//   { path: "/", element: <div>Test page</div> },
+// ]);
 root.render(
-  
-    <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter path={"/"}>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>
       </Provider>
     </BrowserRouter>
-
+  </React.StrictMode>
 );
 
 reportWebVitals();
