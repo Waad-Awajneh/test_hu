@@ -13,15 +13,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   { path: "/", element: <div>Test page</div> },
 // ]);
 root.render(
-  <React.StrictMode>
-    <BrowserRouter path="/">
+  <BrowserRouter path=".">
+    <React.StrictMode>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>
       </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+    </React.StrictMode>
+  </BrowserRouter>
 );
 
 reportWebVitals();
