@@ -10,7 +10,7 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // const router = createBrowserRouter([
-//   { path: "/", element: <div>Test page</div> },
+//   { path: "/", element: <App/> },
 // ]);
 root.render(
   <BrowserRouter path=".">
