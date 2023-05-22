@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   { path: "/", element: <App/> },
 // ]);
 root.render(
-  <BrowserRouter path=".">
+  <BrowserRouter basename="/index.html">
     <React.StrictMode>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
