@@ -11,6 +11,7 @@ import Spinner from "./components/Spinner";
 
 // styles
 import "./App.css";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 // pages
 const Home = lazy(() => import("./pages/Home/index.js"));
@@ -32,26 +33,28 @@ function App() {
   // return true && <Spinner />;
   return (
     <div className="App">
-      <Suspense fallback={<Spinner />}>
-        <NavBar />
+      <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+        <Suspense>
+          <NavBar />
 
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/certificates/:id" element={<SingleCertificate />} />
-          <Route path="/repos" element={<Repos />} />
-          <Route path="/uses" element={<Uses />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:id" element={<ArticlePage />} />
-          <Route path="/tags/:id" element={<ArticleTags />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/certificates/:id" element={<SingleCertificate />} />
+            <Route path="/repos" element={<Repos />} />
+            <Route path="/uses" element={<Uses />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:id" element={<ArticlePage />} />
+            <Route path="/tags/:id" element={<ArticleTags />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-        <Footer />
-      </Suspense>
+          <Footer />
+        </Suspense>
+      </SkeletonTheme>
 
       {/* GoToTop button */}
       <span className="goToTopBtn">

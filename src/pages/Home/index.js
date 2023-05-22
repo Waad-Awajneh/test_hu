@@ -51,8 +51,6 @@ export default function Home() {
     (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
 
-  console.log({ GitHubRepos });
-
   useEffect(() => {
     // fetching projects
     dispatch(FetchVercelProjects());

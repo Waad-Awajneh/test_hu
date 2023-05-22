@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 // react-helmet
 import { Helmet } from "react-helmet";
 
+
+
 // component
 import FetchedArticle from "../../components/FetchedArticle";
 
@@ -56,8 +58,8 @@ export default function Articles() {
           <p>
             On this page, you will find a selection of my written articles. You
             can browse through these articles by clicking on any of the tags,
-            such as <strong>Coding</strong> or <strong>JavaScript</strong>, or by
-            typing a specific tag in the search bar to filter the articles
+            such as <strong>Coding</strong> or <strong>JavaScript</strong>, or
+            by typing a specific tag in the search bar to filter the articles
             accordingly.
           </p>
         </header>
@@ -85,7 +87,7 @@ export default function Articles() {
                   ContentfulProject={ContentfulProject}
                   index={index}
                 />
-              ))
+              )) 
             )}
           </div>
         </div>
